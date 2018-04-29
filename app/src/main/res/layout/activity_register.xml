@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context="com.example.g.myfirstapp.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_joinUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:text="@string/title_joinUs"
+            android:textColor="@android:color/white"
+            android:textSize="60sp" />
+
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editText_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="63dp"
+            android:ems="10"
+            android:hint="@string/title_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:maxLength="100"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="132dp" />
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_email"
+            android:layout_alignStart="@+id/editText_email"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="@string/title_password"
+            android:inputType="textPassword"
+            android:maxLength="100"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <EditText
+            android:id="@+id/editText_confPassword"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_password"
+            android:layout_alignStart="@+id/editText_password"
+            android:layout_below="@+id/editText_password"
+            android:layout_marginTop="19dp"
+            android:ems="10"
+            android:hint="@string/title_confirmPassword"
+            android:inputType="textPassword"
+            android:maxLength="100"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_confPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:backgroundTint="#88ffff"
+            android:text="@string/title_register"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_already"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="haveAccount"
+            android:text="@string/title_already"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

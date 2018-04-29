@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.g.myfirstapp.RestaurantActivity">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_direccion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constrainLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/iv_queue"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignLeft="@+id/imageView4"
+                            android:layout_alignStart="@+id/imageView4"
+                            android:layout_below="@+id/imageView4"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_link_black_24dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_phone"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_above="@+id/tv_msg_comment"
+                            android:layout_alignLeft="@+id/imageView"
+                            android:layout_alignStart="@+id/imageView"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_queue"
+                            app:srcCompat="@mipmap/ic_phone" />
+
+                        <ImageView
+                            android:id="@+id/iv_schedule"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_above="@+id/imageView4"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_phone"
+                            app:srcCompat="@mipmap/ic_schedule" />
+
+                        <TextView
+                            android:id="@+id/tv_queue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Web site"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toEndOf="@+id/iv_queue"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_valueQueue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="value_websus"
+                            app:layout_constraintStart_toEndOf="@+id/iv_queue"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_queue"
+                            android:autoLink="web"/>
+
+                        <TextView
+                            android:id="@+id/tv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/tv_msg_comment"
+                            android:layout_alignStart="@+id/tv_msg_comment"
+                            android:layout_below="@+id/imageView"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Phone"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toEndOf="@+id/iv_phone"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_valueQueue" />
+
+                        <TextView
+                            android:id="@+id/tv_valuePhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="value_phone"
+                            app:layout_constraintStart_toEndOf="@+id/iv_phone"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
+
+                        <TextView
+                            android:id="@+id/tv_schedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/imageView4"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/imageView"
+                            android:layout_toRightOf="@+id/imageView"
+                            android:text="Schedule"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toEndOf="@+id/iv_schedule"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_valuePhone" />
+
+                        <TextView
+                            android:id="@+id/tv_valueSchedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="value_schedule"
+                            app:layout_constraintStart_toEndOf="@+id/iv_schedule"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_schedule" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp">
+
+                    <ListView
+                        android:id="@+id/lv_menus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp">
+
+                    <ListView
+                        android:id="@+id/lv_reviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="157dp"
+        android:contentDescription="@string/ConDesImgRes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/imagenotavailable" />
+
+    <TextView
+        android:id="@+id/tv_infoRestaurante"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_review"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_infoRestaurante" />
+
+    <TextView
+        android:id="@+id/tv_direccion"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="8dp"
+        android:text="Dirección del restaurante"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar_review" />
+
+
+</android.support.constraint.ConstraintLayout>
